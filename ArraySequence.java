@@ -10,4 +10,12 @@ public class ArraySequence implements IntegerSequence {
     }
     currentIndex = data[0];
   }
+
+  public void reset() {
+    currentIndex = start;
+  }
+
+  public ArraySequence(IntegerSequence otherseq) {
+    reset(otherseq);
+  }
 }
