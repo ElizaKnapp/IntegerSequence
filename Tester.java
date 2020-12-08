@@ -35,5 +35,14 @@ public class Tester {
     }
     System.out.println();
 
+    IntegerSequence r = new Range(10,20);
+    IntegerSequence t1 = new ArraySequence(r);
+
+    System.out.println("ArraySequence(seq):");
+    while(t1.hasNext()){
+      System.out.print(t1.next()+", ");
+    }
+    System.out.println();
+
   }
 }
