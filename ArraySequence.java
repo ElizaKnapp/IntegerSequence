@@ -15,6 +15,11 @@ public class ArraySequence implements IntegerSequence {
     currentIndex = start;
   }
 
+  public int length() {
+    return data.length();
+  }
+
+
   public ArraySequence(IntegerSequence otherseq) {
     reset(otherseq);
   }
