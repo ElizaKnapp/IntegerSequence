@@ -11,12 +11,20 @@ public class Range implements IntegerSequence {
     this.end = end;
     current = start;
   }
-  
+
   public void reset() {
     current = start;
   }
 
   public int length() {
     return end - start + 1;
+  }
+
+  public boolean hasNext() {
+    boolean ans = false;
+    if (current <= end) {
+      ans = true;
+    }
+    return ans;
   }
 }
