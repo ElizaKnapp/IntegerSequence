@@ -5,10 +5,8 @@ public class ArraySequence implements IntegerSequence {
   private int[] data;
 
   public ArraySequence(int[] other) {
-    for (int i = 0; i < other.length; i++) {
-      data[i] = other[i];
-    }
-    currentIndex = data[0];
+    data = other;
+    currentIndex = 0;
   }
 
   public void reset() {
@@ -28,7 +26,7 @@ public class ArraySequence implements IntegerSequence {
   }
 
   public int next() {
-    int holder = currentIndex;
+    int holder = data[currentIndex];
     if (!hasNext()) {
       throw new NoSuchElementException("there is no next, you've reached the end");
     }
@@ -38,7 +36,4 @@ public class ArraySequence implements IntegerSequence {
     return holder;
   }
 
-  public ArraySequence(IntegerSequence otherseq) {
-    reset(otherseq);
-  }
 }
