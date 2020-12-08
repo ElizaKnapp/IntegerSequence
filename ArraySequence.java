@@ -36,4 +36,16 @@ public class ArraySequence implements IntegerSequence {
     return holder;
   }
 
+  public ArraySequence(IntegerSequence otherseq) {
+    otherseq.reset();
+    int counter = 0;
+    int[] holder = new int[otherseq.length()];
+    while (otherseq.hasNext()) {
+      holder[counter] = otherseq.next();
+      counter++;
+    }
+    data = holder;
+    otherseq.reset();
+  }
+
 }
