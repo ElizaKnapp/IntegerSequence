@@ -8,5 +8,11 @@ public class Tester {
           }
         }
         System.out.println();
+
+    IntegerSequence t1 = new Range(-2, 5);
+    for (int i = 0; i < t1.length(); i++) {
+      System.out.println(t1.next());
+    }
+
   }
 }
