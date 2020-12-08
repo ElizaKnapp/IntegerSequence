@@ -27,4 +27,15 @@ public class Range implements IntegerSequence {
     }
     return ans;
   }
+
+  public int next() {
+    int holder = current;
+    if (!hasNext()) {
+      throw new NoSuchElementException("there is no next, you've reached the end");
+    }
+    else {
+      current++;
+    }
+    return holder;
+  }
 }
