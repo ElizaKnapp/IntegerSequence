@@ -26,11 +26,12 @@ public class ArraySequence implements IntegerSequence {
   }
 
   public int next() {
-    int holder = data[currentIndex];
+    int holder = 0;
     if (!hasNext()) {
       throw new NoSuchElementException("there is no next, you've reached the end");
     }
     else {
+      holder = data[currentIndex];
       currentIndex++;
     }
     return holder;
