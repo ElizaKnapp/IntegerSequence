@@ -5,7 +5,11 @@ public class ArraySequence implements IntegerSequence {
   private int[] data;
 
   public ArraySequence(int[] other) {
-    data = other;
+    int[] holder = new int[other.length];
+    for (int i = 0; i < other.length; i++) {
+      holder[i] = other[i];
+    }
+    data = holder;
     currentIndex = 0;
   }
 
